@@ -112,3 +112,65 @@ Processing by PostsController#new as HTML
   Parameters: {"post"=>{"action"=>"create", "authenticity_token"=>"wM0kUAuTuVVs64yO9C+2FgVExLWEkXYBL4fHjMvdHb/wXQBnEIZ1bXK7fKn5neP40gN03qULwt9kcGv5dkFKWg==", "commit"=>"Submit Post", "controller"=>"posts", "description"=>"asdf", "title"=>"Rails Introduction Quiz", "utf8"=>"✓"}}
   Rendered posts/new.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 23:48:26 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/dapawn/.rvm/gems/ruby-2.3.3/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 139ms (Views: 110.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-08-07 23:48:41 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1070ms (Views: 1069.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-08-07 23:48:42 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-08-07 23:48:42 -0400
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-08-07 23:48:42 -0400
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-08-07 23:49:37 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"My Post Title", "description"=>"This is my post description."}, "authenticity_token"=>"EzuFGVMKYwxBurrGsiPO0ZMRhDYMwJAeYa45/awNh7fMcZEDaE/Ud4tN2VFJVLQtLrf9Zo9grHFBbbpjwTe4tA=="}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Post Title"], ["description", "This is my post description."], ["created_at", "2018-08-08 03:49:37.070119"], ["updated_at", "2018-08-08 03:49:37.070119"]]
+  [1m[35m (9.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 48ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-08-07 23:49:37 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-08-07 23:49:52 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-08-07 23:50:12 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"2nd Post title", "description"=>"This is my second post!"}, "authenticity_token"=>"XP8XQB2ar9M2FQmIZIuITgr1c3fMYNBQ7ugf7cyXxyaDtQNaJt8YqPziah+f/PKyt1MKJ0/A7D/OK5xzoa34JQ=="}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "2nd Post title"], ["description", "This is my second post!"], ["created_at", "2018-08-08 03:50:12.333898"], ["updated_at", "2018-08-08 03:50:12.333898"]]
+  [1m[35m (249.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 255ms (ActiveRecord: 250.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-08-07 23:50:12 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 47ms (Views: 46.6ms | ActiveRecord: 0.2ms)
