@@ -3,3 +3,7 @@
     <li><%= p.title %> - <%= p.description %></li>
   <% end %>
 </ul>
+
+<%= form_tag new_post_path, :method => :get do %>
+  <%= submit_tag "Create New Post"%>
+<% end %>
